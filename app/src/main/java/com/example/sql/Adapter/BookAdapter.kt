@@ -4,7 +4,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sql.Fragments.SecondFragmentDirections
 import com.example.sql.R
 import com.example.sql.entities.Book
 
@@ -31,6 +33,10 @@ class BookAdapter(var array:List<Book>):RecyclerView.Adapter<BookAdapter.BookVie
         holder.amount.text = item.amount.toString()
         holder.place.text = item.place
 
+        holder.itemView.setOnClickListener {
+                val action = SecondFragmentDirections.actionSecondFragmentToUpdateFragment(item)
+            holder.itemView.findNavController().navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {

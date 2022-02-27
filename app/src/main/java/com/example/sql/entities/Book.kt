@@ -1,17 +1,16 @@
 package com.example.sql.entities
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.PrimaryKey
+import android.os.Parcelable
+import androidx.room.*
+import kotlinx.android.parcel.Parcelize
+import java.security.acl.Owner
 
+@Parcelize
 @Entity(
     foreignKeys = [ForeignKey(
         entity = Genre::class,
         parentColumns = ["id"],
-        childColumns = ["genreId"],
-        onDelete = ForeignKey.CASCADE,
-        onUpdate = ForeignKey.CASCADE
+        childColumns = ["genreId"]
     )]
 )
 data class Book(
@@ -23,11 +22,26 @@ data class Book(
     @ColumnInfo(name = "amount") var amount: Int,
     @ColumnInfo(name = "place") var place: String,
     @ColumnInfo(name = "genreId") var genreId: Int
-)
+) : Parcelable
+
 
 @Entity
 data class Genre(
     @PrimaryKey var id: Int,
     @ColumnInfo(name = "genreName") var genreName: String
+){
+    override fun toString(): String {
+        return genreName
+    }
+}
+
+data class BooksAndGenres(
+    @Embedded val genre: Genre,
+    @Relation(
+        parentColumn = "id",
+        entityColumn = "genreId"
+    )
+    val book: List<Book>
 )
+
 

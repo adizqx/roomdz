@@ -45,10 +45,6 @@ class FirstFragment : Fragment() {
                  addBook(genre.id)
             }
         }
-
-        binding.deleteBtn.setOnClickListener { App.instance?.getDatabase()?.genreDao()?.deleteAllGenre()
-            Log.i("GetAllGenres","${App.instance?.getDatabase()?.genreDao()?.getAllGenre()}")
-        }
         return binding.root
     }
 

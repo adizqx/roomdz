@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.UpdateFragment">
+
+    <EditText
+        android:id="@+id/changeBookName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:hint="Измените название книги"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/changeAuthor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Измените автора"
+        app:layout_constraintEnd_toEndOf="@+id/changeBookName"
+        app:layout_constraintStart_toStartOf="@+id/changeBookName"
+        app:layout_constraintTop_toBottomOf="@+id/changeBookName" />
+
+    <EditText
+        android:id="@+id/changePublication"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Измените дату публикации"
+        app:layout_constraintEnd_toEndOf="@+id/changeAuthor"
+        app:layout_constraintStart_toStartOf="@+id/changeAuthor"
+        app:layout_constraintTop_toBottomOf="@+id/changeAuthor" />
+
+    <EditText
+        android:id="@+id/changePageAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        android:hint="Измените кол-во страниц"
+        app:layout_constraintEnd_toEndOf="@+id/changePublication"
+        app:layout_constraintStart_toStartOf="@+id/changePublication"
+        app:layout_constraintTop_toBottomOf="@+id/changePublication" />
+
+    <EditText
+        android:id="@+id/changeAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        android:hint="Измените кол-во"
+        app:layout_constraintEnd_toEndOf="@+id/changePageAmount"
+        app:layout_constraintStart_toStartOf="@+id/changePageAmount"
+        app:layout_constraintTop_toBottomOf="@+id/changePageAmount" />
+
+    <EditText
+        android:id="@+id/changePlace"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Измените место"
+        app:layout_constraintEnd_toEndOf="@+id/changeAmount"
+        app:layout_constraintStart_toStartOf="@+id/changeAmount"
+        app:layout_constraintTop_toBottomOf="@+id/changeAmount" />
+
+
+    <Button
+        android:id="@+id/editBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:text="Edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changePlace" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changePlace" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,9 +14,6 @@ interface genreDao {
     @Delete
     fun deleteGenre(genre: Genre)
 
-    @Query("DELETE FROM Genre")
-    fun deleteAllGenre()
-
     @Update
     fun updateGenre(genre: Genre)
 }

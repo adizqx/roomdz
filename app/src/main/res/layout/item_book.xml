@@ -1,72 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraint"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp">
 
-    <TextView
-        android:id="@+id/bookName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/bookName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/author"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/bookName"
-        app:layout_constraintEnd_toEndOf="@+id/bookName"
-        app:layout_constraintTop_toBottomOf="@+id/bookName"
-        />
-    <TextView
-        android:id="@+id/pubDate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/author"
-        app:layout_constraintEnd_toEndOf="@+id/author"
-        app:layout_constraintTop_toBottomOf="@+id/author"
-        />
-    <TextView
-        android:id="@+id/pageAmount"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/pubDate"
-        app:layout_constraintEnd_toEndOf="@+id/pubDate"
-        app:layout_constraintTop_toBottomOf="@+id/pubDate"
-        />
-    <TextView
-        android:id="@+id/amount"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/pageAmount"
-        app:layout_constraintEnd_toEndOf="@+id/pageAmount"
-        app:layout_constraintTop_toBottomOf="@+id/pageAmount"
-        />
-    <TextView
-        android:id="@+id/place"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/amount"
-        app:layout_constraintEnd_toEndOf="@+id/amount"
-        app:layout_constraintTop_toBottomOf="@+id/amount"
-        />
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/bookName"
+            app:layout_constraintStart_toStartOf="@+id/bookName"
+            app:layout_constraintTop_toBottomOf="@+id/bookName" />
 
+        <TextView
+            android:id="@+id/pubDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/author"
+            app:layout_constraintStart_toStartOf="@+id/author"
+            app:layout_constraintTop_toBottomOf="@+id/author" />
 
+        <TextView
+            android:id="@+id/pageAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/pubDate"
+            app:layout_constraintStart_toStartOf="@+id/pubDate"
+            app:layout_constraintTop_toBottomOf="@+id/pubDate" />
 
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/pageAmount"
+            app:layout_constraintStart_toStartOf="@+id/pageAmount"
+            app:layout_constraintTop_toBottomOf="@+id/pageAmount" />
+
+        <TextView
+            android:id="@+id/place"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/amount"
+            app:layout_constraintStart_toStartOf="@+id/amount"
+            app:layout_constraintTop_toBottomOf="@+id/amount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
